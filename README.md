@@ -1,11 +1,13 @@
-# api documentation for  [grunt-contrib-jshint (v1.1.0)](https://github.com/gruntjs/grunt-contrib-jshint#readme)  [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-jshint.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-jshint)
+# api documentation for  [grunt-contrib-jshint (v1.1.0)](https://github.com/gruntjs/grunt-contrib-jshint#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-contrib-jshint.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-contrib-jshint) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-jshint.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-jshint)
 #### Validate files with JSHint
 
 [![NPM](https://nodei.co/npm/grunt-contrib-jshint.png?downloads=true)](https://www.npmjs.com/package/grunt-contrib-jshint)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-grunt-contrib-jshint/build/screen-capture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-grunt_contrib_jshint_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-grunt-contrib-jshint/build..beta..travis-ci.org/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-grunt-contrib-jshint/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-grunt-contrib-jshint_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-grunt-contrib-jshint/build/apidoc.html)
 
-![package-listing](https://npmdoc.github.io/node-npmdoc-grunt-contrib-jshint/build/screen-capture.npmPackageListing.svg)
+![npmPackageListing](https://npmdoc.github.io/node-npmdoc-grunt-contrib-jshint/build/screenCapture.npmPackageListing.svg)
+
+![npmPackageDependencyTree](https://npmdoc.github.io/node-npmdoc-grunt-contrib-jshint/build/screenCapture.npmPackageDependencyTree.svg)
 
 
 
