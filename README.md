@@ -1,9 +1,11 @@
 # api documentation for  [grunt-contrib-jshint (v1.1.0)](https://github.com/gruntjs/grunt-contrib-jshint#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-contrib-jshint.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-contrib-jshint) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-jshint.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-jshint)
 #### Validate files with JSHint
 
-[![NPM](https://nodei.co/npm/grunt-contrib-jshint.png?downloads=true)](https://www.npmjs.com/package/grunt-contrib-jshint)
+[![NPM](https://nodei.co/npm/grunt-contrib-jshint.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/grunt-contrib-jshint)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-grunt-contrib-jshint/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-grunt-contrib-jshint_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-grunt-contrib-jshint/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-grunt-contrib-jshint/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-grunt-contrib-jshint/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-grunt-contrib-jshint/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-grunt-contrib-jshint/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-grunt-contrib-jshint/build/screenCapture.npmPackageListing.svg)
 
@@ -121,28 +123,22 @@
     "main": "tasks/jshint.js",
     "maintainers": [
         {
-            "name": "cowboy",
-            "email": "cowboy@rj3.net"
+            "name": "cowboy"
         },
         {
-            "name": "tkellen",
-            "email": "tyler@sleekcode.net"
+            "name": "tkellen"
         },
         {
-            "name": "shama",
-            "email": "kyle@dontkry.com"
+            "name": "shama"
         },
         {
-            "name": "vladikoff",
-            "email": "vlad@vladikoff.com"
+            "name": "vladikoff"
         },
         {
-            "name": "sindresorhus",
-            "email": "sindresorhus@gmail.com"
+            "name": "sindresorhus"
         },
         {
-            "name": "jmeas",
-            "email": "jellyes2@gmail.com"
+            "name": "jmeas"
         }
     ],
     "name": "grunt-contrib-jshint",
@@ -150,7 +146,6 @@
     "peerDependencies": {
         "grunt": ">=0.4.0"
     },
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/gruntjs/grunt-contrib-jshint.git"
@@ -161,16 +156,6 @@
     "version": "1.1.0"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module grunt-contrib-jshint](#apidoc.module.grunt-contrib-jshint)
-
-
-
-# <a name="apidoc.module.grunt-contrib-jshint"></a>[module grunt-contrib-jshint](#apidoc.module.grunt-contrib-jshint)
 
 
 
