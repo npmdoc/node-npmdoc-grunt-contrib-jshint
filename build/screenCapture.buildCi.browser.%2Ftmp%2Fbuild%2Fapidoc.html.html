@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/gruntjs/grunt-contrib-jshint#readme"
-
-    >grunt-contrib-jshint (v1.1.0)</a>
+    <a href="https://github.com/gruntjs/grunt-contrib-jshint#readme">grunt-contrib-jshint (v1.1.0)</a>
 </h1>
 <h4>Validate files with JSHint</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.grunt-contrib-jshint">module grunt-contrib-jshint</a><ol>
 
@@ -109,11 +102,11 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">grunt-contrib-jshint = function (grunt) {
 
-  var path = require(&#x27;path&#x27;);
-  var hooker = require(&#x27;hooker&#x27;);
-  var jshint = require(&#x27;./lib/jshint&#x27;).init(grunt);
+  var path = require('path');
+  var hooker = require('hooker');
+  var jshint = require('./lib/jshint').init(grunt);
 
-  grunt.registerMultiTask(&#x27;jshint&#x27;, &#x27;Validate files with JSHint.&#x27;, function() {
+  grunt.registerMultiTask('jshint', 'Validate files with JSHint.', function() {
     var done = this.async();
 
     // Merge task-specific and/or target-specific options with these defaults.
@@ -131,9 +124,9 @@
     var reporterOutput = options.reporterOutput;
 
     // Hook into stdout to capture report
-    var output = &#x27;&#x27;;
+    var output = '';
     if (reporterOutput) {
-      hooker.hook(process.stdout, &#x27;write&#x27;, {
+      hooker.hook(process.stdout, 'write', {
         pre: function(out) {
           output += out;
           return hooker.preempt();
@@ -143,7 +136,7 @@
 
     jshint.lint(this.filesSrc, options, function(results, data) {
       var failed = 0;
-      if (results.length &#x3e; 0) {
+      if (results.length &gt; 0) {
         // Fail task if errors were logged except if force was set.
         failed = force;
         if (jshint.usingGruntReporter === true) {
@@ -153,25 +146,25 @@
           }, 0);
 
           var numFiles = data.length;
-          grunt.log.error(numErrors + &#x27; &#x27; + grunt.util.pluralize(numErrors, &#x27;error/errors&#x27;) + &#x27; in &#x27; +
-                          numFiles + &#x27; &#x27; + grunt.util.pluralize(numFiles, &#x27;file/files&#x27;));
+          grunt.log.error(numErrors + ' ' + grunt.util.pluralize(numErrors, 'error/errors') + ' in ' +
+                          numFiles + ' ' + grunt.util.pluralize(numFiles, 'file/files'));
         }
       } else {
-        if (jshint.usingGruntReporter === true &#x26;&#x26; data.length &#x3e; 0) {
-          grunt.log.ok(data.length + &#x27; &#x27; + grunt.util.pluralize(data.length, &#x27;file/files&#x27;) + &#x27; lint free.&#x27;);
+        if (jshint.usingGruntReporter === true &amp;&amp; data.length &gt; 0) {
+          grunt.log.ok(data.length + ' ' + grunt.util.pluralize(data.length, 'file/files') + ' lint free.');
         }
       }
 
       // Write the output of the reporter if wanted
       if (reporterOutput) {
-        hooker.unhook(process.stdout, &#x27;write&#x27;);
+        hooker.unhook(process.stdout, 'write');
         reporterOutput = grunt.template.process(reporterOutput);
         var destDir = path.dirname(reporterOutput);
         if (!grunt.file.exists(destDir)) {
           grunt.file.mkdir(destDir);
         }
         grunt.file.write(reporterOutput, output);
-        grunt.log.ok(&#x27;Report &#x22;&#x27; + reporterOutput + &#x27;&#x22; created.&#x27;);
+        grunt.log.ok('Report "' + reporterOutput + '" created.');
       }
 
       done(failed);
@@ -224,3 +217,4 @@
     ]
 </div>
 </div>
+</body></html>

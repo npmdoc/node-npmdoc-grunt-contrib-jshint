@@ -61,12 +61,160 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.grunt-contrib-jshint">module grunt-contrib-jshint</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-contrib-jshint.grunt-contrib-jshint">
+            function <span class="apidocSignatureSpan"></span>grunt-contrib-jshint
+            <span class="apidocSignatureSpan">(grunt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-contrib-jshint.toString">
+            function <span class="apidocSignatureSpan">grunt-contrib-jshint.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-contrib-jshint.toString">module grunt-contrib-jshint.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-contrib-jshint.toString.toString">
+            function <span class="apidocSignatureSpan">grunt-contrib-jshint.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.grunt-contrib-jshint" id="apidoc.module.grunt-contrib-jshint">module grunt-contrib-jshint</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-contrib-jshint.grunt-contrib-jshint" id="apidoc.element.grunt-contrib-jshint.grunt-contrib-jshint">
+        function <span class="apidocSignatureSpan"></span>grunt-contrib-jshint
+        <span class="apidocSignatureSpan">(grunt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">grunt-contrib-jshint = function (grunt) {
+
+  var path = require(&#x27;path&#x27;);
+  var hooker = require(&#x27;hooker&#x27;);
+  var jshint = require(&#x27;./lib/jshint&#x27;).init(grunt);
+
+  grunt.registerMultiTask(&#x27;jshint&#x27;, &#x27;Validate files with JSHint.&#x27;, function() {
+    var done = this.async();
+
+    // Merge task-specific and/or target-specific options with these defaults.
+    var options = this.options({
+      force: false,
+      reporter: null,
+      reporterOutputRelative: true
+    });
+
+    // Report JSHint errors but dont fail the task
+    var force = options.force;
+    delete options.force;
+
+    // Whether to output the report to a file
+    var reporterOutput = options.reporterOutput;
+
+    // Hook into stdout to capture report
+    var output = &#x27;&#x27;;
+    if (reporterOutput) {
+      hooker.hook(process.stdout, &#x27;write&#x27;, {
+        pre: function(out) {
+          output += out;
+          return hooker.preempt();
+        }
+      });
+    }
+
+    jshint.lint(this.filesSrc, options, function(results, data) {
+      var failed = 0;
+      if (results.length &#x3e; 0) {
+        // Fail task if errors were logged except if force was set.
+        failed = force;
+        if (jshint.usingGruntReporter === true) {
+
+          var numErrors = grunt.util._.reduce(results, function(memo, result) {
+            return memo + (result.error ? 1 : 0);
+          }, 0);
+
+          var numFiles = data.length;
+          grunt.log.error(numErrors + &#x27; &#x27; + grunt.util.pluralize(numErrors, &#x27;error/errors&#x27;) + &#x27; in &#x27; +
+                          numFiles + &#x27; &#x27; + grunt.util.pluralize(numFiles, &#x27;file/files&#x27;));
+        }
+      } else {
+        if (jshint.usingGruntReporter === true &#x26;&#x26; data.length &#x3e; 0) {
+          grunt.log.ok(data.length + &#x27; &#x27; + grunt.util.pluralize(data.length, &#x27;file/files&#x27;) + &#x27; lint free.&#x27;);
+        }
+      }
+
+      // Write the output of the reporter if wanted
+      if (reporterOutput) {
+        hooker.unhook(process.stdout, &#x27;write&#x27;);
+        reporterOutput = grunt.template.process(reporterOutput);
+        var destDir = path.dirname(reporterOutput);
+        if (!grunt.file.exists(destDir)) {
+          grunt.file.mkdir(destDir);
+        }
+        grunt.file.write(reporterOutput, output);
+        grunt.log.ok(&#x27;Report &#x22;&#x27; + reporterOutput + &#x27;&#x22; created.&#x27;);
+      }
+
+      done(failed);
+    });
+  });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-contrib-jshint.toString" id="apidoc.element.grunt-contrib-jshint.toString">
+        function <span class="apidocSignatureSpan">grunt-contrib-jshint.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-contrib-jshint.toString" id="apidoc.module.grunt-contrib-jshint.toString">module grunt-contrib-jshint.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-contrib-jshint.toString.toString" id="apidoc.element.grunt-contrib-jshint.toString.toString">
+        function <span class="apidocSignatureSpan">grunt-contrib-jshint.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 
