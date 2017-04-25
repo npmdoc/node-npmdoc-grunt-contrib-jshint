@@ -1,4 +1,7 @@
-# api documentation for  [grunt-contrib-jshint (v1.1.0)](https://github.com/gruntjs/grunt-contrib-jshint#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-contrib-jshint.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-contrib-jshint) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-jshint.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-jshint)
+# npmdoc-grunt-contrib-jshint
+
+#### basic api documentation for  [grunt-contrib-jshint (v1.1.0)](https://github.com/gruntjs/grunt-contrib-jshint#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-contrib-jshint.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-contrib-jshint) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-jshint.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-jshint)
+
 #### Validate files with JSHint
 
 [![NPM](https://nodei.co/npm/grunt-contrib-jshint.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/grunt-contrib-jshint)
@@ -153,7 +156,8 @@
     "scripts": {
         "test": "grunt test"
     },
-    "version": "1.1.0"
+    "version": "1.1.0",
+    "bin": {}
 }
 ```
 

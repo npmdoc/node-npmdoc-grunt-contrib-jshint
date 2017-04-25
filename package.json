@@ -1,7 +1,7 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
     "buildNpmdoc": "grunt-contrib-jshint",
-    "description": "api documentation for [grunt-contrib-jshint (v1.1.0)](https://github.com/gruntjs/grunt-contrib-jshint#readme) [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-contrib-jshint.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-contrib-jshint) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-jshint.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-jshint)",
+    "description": "#### basic api documentation for  [grunt-contrib-jshint (v1.1.0)](https://github.com/gruntjs/grunt-contrib-jshint#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-contrib-jshint.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-contrib-jshint) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-jshint.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-jshint)",
     "devDependencies": {
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
         "grunt-contrib-jshint": "*",
